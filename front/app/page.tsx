@@ -1,8 +1,17 @@
+import JobCelebrationForm from "@/app/job-celebration-from";
+import { Footer } from "@/components/common/Footer";
+import { HeaderSection } from "@/components/common/HeaderSection";
+import { Header } from "@/components/common/Header";
+
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <h1>JobPlay</h1>
-      <h2>Ci Test</h2>
+    <div className="min-h-screen bg-gray-50 px-4 py-8">
+      <div className="mx-auto max-w-md space-y-8">
+        <Header />
+        <HeaderSection />
+        <JobCelebrationForm />
+        <Footer />
+      </div>
     </div>
   );
 }
