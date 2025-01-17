@@ -7,8 +7,8 @@ on:
   pull_request:
     branches:
       - "*"
-  path:
-    - "backend/**"
+    paths:
+      - "backend/**"
 
 jobs:
   build:
