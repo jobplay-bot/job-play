@@ -1,11 +1,8 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.4.2"
-	id("io.spring.dependency-management") version "1.1.7"
+	id("org.springframework.boot") version "3.4.2" apply false
+	id("io.spring.dependency-management") version "1.1.7" apply false
 }
-
-group = "com.jobplay"
-version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
@@ -13,25 +10,42 @@ java {
 	}
 }
 
-configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
-	}
+allprojects {
+    group = "com.jobplay"
+    version = "0.0.1-SNAPSHOT"
+
+    repositories {
+        mavenCentral()
+    }
 }
 
-repositories {
-	mavenCentral()
-}
+subprojects {
+    apply(plugin = "java")
+    apply(plugin = "org.springframework.boot")
+    apply(plugin = "io.spring.dependency-management")
 
-dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	compileOnly("org.projectlombok:lombok")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
+    configurations {
+        compileOnly {
+            extendsFrom(configurations.annotationProcessor.get())
+        }
+    }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+    dependencies {
+        compileOnly("org.projectlombok:lombok")
+        annotationProcessor("org.projectlombok:lombok")
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
+
+    tasks.getByName("bootJar") {
+        enabled = false
+    }
+
+    tasks.getByName("jar") {
+        enabled = true
+    }
 }
