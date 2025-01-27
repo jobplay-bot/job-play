@@ -1,7 +1,6 @@
 rootProject.name = "core"
 
-include("job-play-domain")
-include("libs:logging")
+include("job-play-domain", "logging")
 
 pluginManagement {
     val springBootVersion: String by settings
