@@ -3,8 +3,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Share2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function JobDetailForm() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/careers"); // "/careers" 경로로 이동
+  };
   return (
     <Card className="mx-auto max-w-md p-6">
       {/* Header */}
@@ -88,7 +94,10 @@ export default function JobDetailForm() {
       </div>
 
       {/* Submit Button */}
-      <Button className="w-full bg-blue-600 text-white hover:bg-blue-700">
+      <Button
+        className="w-full bg-blue-600 text-white hover:bg-blue-700"
+        onClick={handleClick}
+      >
         공고 자세히 보기
       </Button>
     </Card>
