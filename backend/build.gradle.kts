@@ -3,8 +3,8 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
 	java
-	id("org.springframework.boot") version "3.4.2" apply false
-	id("io.spring.dependency-management") version "1.1.7" apply false
+	id("org.springframework.boot") apply false
+	id("io.spring.dependency-management") apply false
 }
 
 java {
@@ -13,9 +13,12 @@ java {
 	}
 }
 
+val projectGroup: String by project
+val applicationVersion: String by project
+
 allprojects {
-    group = "com.jobplay"
-    version = "0.0.1-SNAPSHOT"
+    group = projectGroup
+    version = applicationVersion
 
     repositories {
         mavenCentral()
