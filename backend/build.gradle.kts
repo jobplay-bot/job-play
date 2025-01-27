@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
 	java
 	id("org.springframework.boot") version "3.4.2" apply false
@@ -37,8 +40,16 @@ subprojects {
         testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     }
 
-    tasks.withType<Test> {
+    tasks.test {
         useJUnitPlatform()
+        testLogging {
+            events = setOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+            exceptionFormat = TestExceptionFormat.FULL
+            showCauses = true
+            showExceptions = true
+            showStackTraces = true
+        }
+        systemProperty("spring.profiles.active", "test")
     }
 
     tasks.getByName("bootJar") {
