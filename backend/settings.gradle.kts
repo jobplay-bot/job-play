@@ -1,6 +1,6 @@
 rootProject.name = "core"
 
-include("job-play-domain", "logging")
+include("apps:job-play-domain", "apps:job-play-admin")
 
 pluginManagement {
     val springBootVersion: String by settings
