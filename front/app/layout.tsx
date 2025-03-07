@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Job-Play",
+  title: "Job Play",
   description: "지원자에게 이력서를 받아서 매칭해주는 서비스 취업 컨설팅",
 };
 
@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en">
-      <body
-          className={`${poppins.variable} font-poppins antialiased`}
-      >
+      <body className={`${poppins.variable} font-poppins antialiased`}>
       {children}
       </body>
       </html>
