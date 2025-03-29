@@ -9,7 +9,7 @@ export default function Home() {
       <div className="mx-auto max-w-md space-y-8">
         <Header />
         <HeaderSection />
-        <JobCelebrationForm />
+        <JobCelebrationForm /> 
         <Footer />
       </div>
     </div> 
