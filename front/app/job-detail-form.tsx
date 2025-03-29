@@ -4,13 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Share2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { JobDetail } from "../model/job.model";
 
-export default function JobDetailForm() {
+interface Props {
+  job: JobDetail;
+}
+
+export default function JobDetailForm({ job }: Props) {
   const router = useRouter();
 
   const handleClick = () => {
     router.push("/careers"); // "/careers" 경로로 이동
   };
+
   return (
     <Card className="mx-auto max-w-md p-6">
       {/* Header */}
