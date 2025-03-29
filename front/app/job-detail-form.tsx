@@ -17,11 +17,12 @@ export default function JobDetailForm({ job }: Props) {
     router.push("/careers"); // "/careers" 경로로 이동
   };
 
+
   return (
     <Card className="mx-auto max-w-md p-6">
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">헤달 D-7</h2>
+        <h2 className="text-lg font-semibold">{job.title}</h2>
         <Button variant="ghost" size="icon">
           <Share2 className="size-5" />
         </Button>
@@ -29,7 +30,7 @@ export default function JobDetailForm({ job }: Props) {
 
       {/* Job Description */}
       <p className="mb-4 text-gray-700">
-        헤달 갤러리에서 워크키에 마케터를 찾고있어요.
+        {job.description}
       </p>
 
       {/* Job Type Tabs */}
@@ -38,10 +39,10 @@ export default function JobDetailForm({ job }: Props) {
           variant="secondary"
           className="bg-blue-50 text-blue-600 hover:bg-blue-100"
         >
-          정규직
+          {job.jobType[0]}
         </Button>
         <Button variant="ghost" className="text-gray-500">
-          마케터
+          {job.jobType[1]}
         </Button>
       </div>
 
