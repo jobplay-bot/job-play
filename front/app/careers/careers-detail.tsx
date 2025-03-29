@@ -4,7 +4,7 @@ import CareersDetailQualification from "@/app/careers/careers-detail-qualificati
 
 export default function CareersDetail() {
   return (
-    <div className="grid gap-10 bg-white px-4 py-8 mb-40">
+    <div className="mb-40 grid gap-10 bg-white px-4 py-8">
       <CareersDetailHeader />
       <hr className="border-y-4 border-gray-100" />
       <CareersDetailInfo />

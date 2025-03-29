@@ -23,9 +23,9 @@ export default function CareersDetailInfo() {
 
   return (
     <div className="grid">
-      <div className="text-sm mb-12 font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+      <div className="mb-12 border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400">
         <ul className="flex flex-wrap ">
-          <li className="flex-1 me-2">
+          <li className="me-2 flex-1">
             <div
               className={`${baseClass} ${activeTab === "details" ? activeClass : inactiveClass}`}
               onClick={() => handleTabClick("details", detailsRef)}
@@ -33,7 +33,7 @@ export default function CareersDetailInfo() {
               상세 내용
             </div>
           </li>
-          <li className="flex-1 me-2">
+          <li className="me-2 flex-1">
             <div
               className={`${baseClass} ${activeTab === "conditions" ? activeClass : inactiveClass}`}
               onClick={() => handleTabClick("conditions", conditionsRef)}
@@ -41,7 +41,7 @@ export default function CareersDetailInfo() {
               모집 조건
             </div>
           </li>
-          <li className="flex-1 me-2">
+          <li className="me-2 flex-1">
             <div
               className={`${baseClass} ${activeTab === "qualifications" ? activeClass : inactiveClass}`}
               onClick={() =>
@@ -72,10 +72,10 @@ export default function CareersDetailInfo() {
         </div>
       </div>
 
-      <hr className="border-y-4 my-12 border-gray-100" />
+      <hr className="my-12 border-y-4 border-gray-100" />
 
       <div ref={conditionsRef} className="grid gap-4">
-        <h4 className="font-bold text-xl	">모집조건</h4>
+        <h4 className="text-xl font-bold	">모집조건</h4>
         <div className="flex gap-3">
           <span className="text-gray-500">마감일자</span>
           <b>2024.08.31</b>
@@ -94,17 +94,17 @@ export default function CareersDetailInfo() {
         </div>
       </div>
 
-      <hr className="border-y-4 my-12 border-gray-100" />
+      <hr className="my-12 border-y-4 border-gray-100" />
 
       <div ref={qualificationsRef} className="grid gap-4">
-        <h4 className="font-bold text-xl	">지원자격</h4>
+        <h4 className="text-xl font-bold	">지원자격</h4>
 
-        <div className="grid bg-gray-100 rounded-2xl px-6 py-8 gap-4">
+        <div className="grid gap-4 rounded-2xl bg-gray-100 px-6 py-8">
           <b className="text-lg">한국어 능력</b>
           <p>일상적인 의사소통 가능</p>
         </div>
 
-        <div className="grid bg-gray-100 rounded-2xl px-6 py-8 gap-4">
+        <div className="grid gap-4 rounded-2xl bg-gray-100 px-6 py-8">
           <b className="text-lg">지원가능 비자</b>
           <div className="mb-6">
             <div className="flex flex-wrap gap-2">
@@ -119,7 +119,7 @@ export default function CareersDetailInfo() {
           </div>
         </div>
 
-        <div className="grid bg-gray-100 rounded-2xl px-6 py-8 gap-4">
+        <div className="grid gap-4 rounded-2xl bg-gray-100 px-6 py-8">
           <b className="text-lg">우대사항</b>
           <p>마케팅 업무 경력 우대, 학력 무관</p>
         </div>
