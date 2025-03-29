@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function CareersDetailQualification() {
   return (
     <div className="grid gap-4">
-      <h4 className="font-bold text-xl	">채용 담당자</h4>
+      <h4 className="text-xl font-bold	">채용 담당자</h4>
 
       <div className="grid gap-4">
         <div className="flex gap-3">
@@ -17,12 +17,12 @@ export default function CareersDetailQualification() {
         </div>
       </div>
 
-      <Link href="#" className="p-6 border border-gray-200 rounded-2xl">
+      <Link href="#" className="rounded-2xl border border-gray-200 p-6">
         <b>(주) 삼성전자 홈페이지</b>
         <span>abcdefg.co.kr</span>
       </Link>
 
-      <div className="grid bg-gray-100 rounded-2xl px-6 py-8 gap-4 text-sm">
+      <div className="grid gap-4 rounded-2xl bg-gray-100 px-6 py-8 text-sm">
         <span>
           본 채용 정보는 잡플레이(JobPlay)의 동의 없이 무단으로 인용, 복제,
           재배포, 편집, 번역, 재가공할 수 없으며 구직 이외의 용도로 사용할 수
@@ -30,7 +30,7 @@ export default function CareersDetailQualification() {
         </span>
         <span>
           해당 채용 공고에 문제, 오류가 있다면
-          <Link href="" className="underline mx-2">
+          <Link href="" className="mx-2 underline">
             여기를 클릭하여 문의를 남겨주세요.
           </Link>
         </span>

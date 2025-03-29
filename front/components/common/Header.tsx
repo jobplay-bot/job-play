@@ -13,8 +13,8 @@ export const Header = () => {
 };
 export const MainHeader = () => {
   return (
-    <header className="border-b border-gray-300 bg-white  border-1">
-      <div className="flex justify-between mx-auto px-20 py-3 text-center">
+    <header className="border-1 border-b border-gray-300  bg-white">
+      <div className="mx-auto flex justify-between px-20 py-3 text-center">
         <div className="flex gap-4 py-2 ">
         <Link href='/'><Image src={Logo} alt="My SVG" /></Link>
           <Link href={``}>채용</Link>
@@ -26,7 +26,7 @@ export const MainHeader = () => {
         <div className="flex gap-5">
           <BellDot />
           <div className="flex">
-            <UserRound strokeWidth={1} color="#ffffff" className="bg-gray-300 rounded-full mr-2"/>
+            <UserRound strokeWidth={1} color="#ffffff" className="mr-2 rounded-full bg-gray-300"/>
             로그인
           </div>
         </div>
