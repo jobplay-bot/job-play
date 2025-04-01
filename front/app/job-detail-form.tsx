@@ -11,11 +11,13 @@ export default function JobDetailForm() {
   const handleClick = () => {
     router.push("/careers"); // "/careers" 경로로 이동
   };
+
+
   return (
     <Card className="mx-auto max-w-md p-6">
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">헤달 D-7</h2>
+        <h2 className="text-lg font-semibold">투데이(주) 중국 거래처 관리 보조 채용</h2>
         <Button variant="ghost" size="icon">
           <Share2 className="size-5" />
         </Button>
@@ -23,7 +25,12 @@ export default function JobDetailForm() {
 
       {/* Job Description */}
       <p className="mb-4 text-gray-700">
-        헤달 갤러리에서 워크키에 마케터를 찾고있어요.
+        `
+        - 중국 거래처와의 커뮤니케이션
+        - 간단한 번역 및 문서 정리
+        - 영업팀 행정 업무 지원
+        - 기타 사무 보조 업무
+        `
       </p>
 
       {/* Job Type Tabs */}
@@ -35,7 +42,7 @@ export default function JobDetailForm() {
           정규직
         </Button>
         <Button variant="ghost" className="text-gray-500">
-          마케터
+          정규직
         </Button>
       </div>
 
