@@ -4,13 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Share2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { JobDetail } from "../model/job.model";
 
-interface Props {
-  job: JobDetail;
-}
-
-export default function JobDetailForm({ job }: Props) {
+export default function JobDetailForm() {
   const router = useRouter();
 
   const handleClick = () => {
@@ -22,7 +17,7 @@ export default function JobDetailForm({ job }: Props) {
     <Card className="mx-auto max-w-md p-6">
       {/* Header */}
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">{job.title}</h2>
+        <h2 className="text-lg font-semibold">투데이(주) 중국 거래처 관리 보조 채용</h2>
         <Button variant="ghost" size="icon">
           <Share2 className="size-5" />
         </Button>
@@ -30,7 +25,12 @@ export default function JobDetailForm({ job }: Props) {
 
       {/* Job Description */}
       <p className="mb-4 text-gray-700">
-        {job.description}
+        `
+        - 중국 거래처와의 커뮤니케이션
+        - 간단한 번역 및 문서 정리
+        - 영업팀 행정 업무 지원
+        - 기타 사무 보조 업무
+        `
       </p>
 
       {/* Job Type Tabs */}
@@ -39,10 +39,10 @@ export default function JobDetailForm({ job }: Props) {
           variant="secondary"
           className="bg-blue-50 text-blue-600 hover:bg-blue-100"
         >
-          {job.jobType[0]}
+          정규직
         </Button>
         <Button variant="ghost" className="text-gray-500">
-          {job.jobType[1]}
+          정규직
         </Button>
       </div>
 
