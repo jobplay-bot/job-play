@@ -65,7 +65,7 @@ export default function CareersDetailQualification({
       {koreanLanguage &&<hr className="border-gray-200" />}
       {koreanLanguage && (
         <div className="mt-0 grid gap-1">
-          <h4 className="font-text-gray-400">한국어 수준</h4>
+          <h4 className="text-gray-400">한국어 수준</h4>
           <p className="font-semibold">{koreanLanguage.level} - {koreanLanguage.description}</p>
         </div>
       )}
