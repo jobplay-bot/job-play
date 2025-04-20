@@ -9,7 +9,7 @@ export default function DashboardLayout({
   return (
     <div>
       <MainHeader />
-      <main className="flex justify-center ">{children}</main>
+      <main className="flex justify-center bg-slate-100">{children}</main>
       <MainFooter />
     </div>
   );
