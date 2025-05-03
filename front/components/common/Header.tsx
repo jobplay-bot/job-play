@@ -1,36 +1,53 @@
+'use client';
+
 import Link from "next/link";
-import { BellDot, UserRound } from "lucide-react";
-import Logo from "../../public/logo.svg"
-import Image from "next/image";
-export const Header = () => {
+import { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { House, Menu, ChevronLeft } from "lucide-react";
+import { useRouter } from 'next/navigation'
+ 
+export function CareerHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="border-b border-gray-100 bg-white">
-      <div className="container mx-auto px-4 py-3 text-center">
-        <h1 className="text-sm font-medium text-gray-900">Job Play</h1>
-      </div>
+    <header className="w-full max-w-xl flex justify-between items-center h-[52px] px-4 bg-white border-b-2">
+      <Link href='/' className="text-blue-600 font-bold text-lg">JOB PLAY</Link>
+
+      {isLoggedIn ? (
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <Menu className="w-6 h-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[250px] bg-white">
+            <div className="flex flex-col space-y-4 mt-4">
+              <Link href={`/userMenu`} className="text-left">👤 마이 페이지</Link>
+              <button className="text-left">⭐️ 지원 현황</button>
+              <button className="text-left">🔴 채용 공고</button>
+              <button className="text-left">💼 직군 및 정보</button>
+              <button className="text-left">❓ FAQ</button>
+              <button className="text-left">⏲ 로그아웃</button>
+            </div>
+          </SheetContent>
+        </Sheet>
+      ) : (
+        <Button variant="outline">로그인 / 회원가입</Button>
+      )}
     </header>
   );
-};
-export const MainHeader = () => {
-  return (
-    <header className="border-1 border-b border-gray-300  bg-white">
-      <div className="mx-auto flex justify-between px-20 py-3 text-center">
-        <div className="flex gap-4 py-2 ">
-        <Link href='/'><Image src={Logo} alt="My SVG" /></Link>
-          <Link href={``}>채용</Link>
-          <Link href={``}>커뮤니티</Link>
-          <Link href={``}>밋업</Link>
-          <Link href={``}>이력서</Link>
-          <Link href={``}>채용 공고 등록</Link>
-        </div>
-        <div className="flex gap-5">
-          <BellDot />
-          <div className="flex">
-            <UserRound strokeWidth={1} color="#ffffff" className="mr-2 rounded-full bg-gray-300"/>
-            로그인
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
+}
+
+export function MenuHeader() {
+  const router = useRouter();
+    return (
+      <header className="w-full max-w-xl flex justify-between items-center h-[52px] px-4 bg-white border-b-2">
+        <ChevronLeft onClick={() => router.back()} className="cursor-pointer"/>
+        <House
+          className="w-6 h-6 cursor-pointer"
+          onClick={() => router.push('/')}
+        />
+      </header>
+    );
+  };
