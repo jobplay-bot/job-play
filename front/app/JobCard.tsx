@@ -22,7 +22,7 @@ interface JobCardProps {
 
 export default function JobCard({ job, onApplyClick }: JobCardProps) {
   return (
-    <Card className="p-4 shadow-md rounded-xl border border-gray-200">
+    <Card className="p-4 rounded-xl border border-gray-200">
       <CardContent className="flex flex-col gap-3">
         {/* 카드 상단: 회사명과 마감일 */}
         <div className="flex items-center justify-between">
@@ -41,7 +41,7 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
         {/* 급여 조건 */}
         <div className="mt-3 mb-3">
           <div className="flex items-center text-sm text-gray-600">
-            <span className="mr-2"><CircleDollarSign className="h-4 w-4 mr-2 text-black"/></span>
+            <span className="mr-2"><CircleDollarSign className="h-4 w-4 text-black"/></span>
             {job.salary}
           </div>
 
