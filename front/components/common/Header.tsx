@@ -23,7 +23,7 @@ export function CareerHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-white">
             <div className="flex flex-col space-y-4 mt-4">
-              <Link href={`/userMenu`} className="text-left">👤 마이 페이지</Link>
+              <Link href={`/settings/pages`} className="text-left">👤 마이 페이지</Link>
               <button className="text-left">⭐️ 지원 현황</button>
               <button className="text-left">🔴 채용 공고</button>
               <button className="text-left">💼 직군 및 정보</button>
