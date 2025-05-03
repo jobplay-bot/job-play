@@ -1,4 +1,4 @@
-import { MainHeader } from "@/components/common/Header";
+import { CareerHeader } from "@/components/common/Header";
 import { MainFooter } from "@/components/common/Footer";
 
 export default function DashboardLayout({
@@ -7,9 +7,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <MainHeader />
-      <main className="flex justify-center bg-slate-100">{children}</main>
+    <div className="bg-slate-100 flex items-center justify-center flex-col">
+      <CareerHeader isLoggedIn={true} />
+      <main className=" bg-slate-100">{children}</main>
       <MainFooter />
     </div>
   );

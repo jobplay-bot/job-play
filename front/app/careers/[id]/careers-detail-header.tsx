@@ -1,7 +1,8 @@
 "use client";
 
+import { useRouter } from 'next/navigation'
 import { useState } from "react";
-import { Heart, CircleDollarSign, MapPin, BookA } from "lucide-react";
+import { Heart, CircleDollarSign, MapPin, BookA, ChevronLeft } from "lucide-react";
 
 interface HeaderProps {
   company: string;
@@ -14,15 +15,18 @@ interface HeaderProps {
 
 export default function CareersDetailHeader({ company, title, deadline, location, salary, visaRequirements = [] }: HeaderProps) {
   const [liked, setLiked] = useState(false);
-
+  const router = useRouter();
   return (
     <div className="p-4 border-b rounded-b-lg bg-white shadow-sm">
-      <div className="flex justify-between items-start text-sm text-gray-500 mb-1">
-        <span>{company} • {deadline}</span>
+       <div className="flex justify-between items-start text-sm mb-10">
+        <ChevronLeft onClick={() => router.back()} className="cursor-pointer"/>
         <Heart
-          className={`w-5 h-5 cursor-pointer ${liked ? "text-red-500 fill-red-500" : "text-gray-400"}`}
+          className={`w-5 h-5 cursor-pointer ${liked ? "text-red-500 fill-red-500" : "text-black"}`}
           onClick={() => setLiked(!liked)}
         />
+      </div>
+      <div className="flex justify-between items-start text-sm text-gray-500 mb-1">
+        <span>{company} • {deadline}</span>
       </div>
       <h2 className="text-lg font-semibold mb-1">{title}</h2>
       <div className="flex items-center text-sm ">

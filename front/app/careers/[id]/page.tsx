@@ -10,7 +10,7 @@ export default function Home({ params }: { params: { id: string } }) {
     }
   return (
     <div className=" max-w-xl">
-      <CareersDetail job={job} onApplyClick={() => {}}/>
+      <CareersDetail job={job} />
     </div>
   );
 }
