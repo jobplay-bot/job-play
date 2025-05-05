@@ -12,7 +12,7 @@ RUN pnpm install
 FROM dependencies AS build
 
 COPY . .
-RUN APP_NAME=$APP_NAME npm run build
+RUN APP_NAME=$APP_NAME pnpm run build
 
 # Production stage
 FROM node:22-alpine AS prod
