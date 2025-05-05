@@ -6,7 +6,7 @@ x-logging: &default-logging
 x-apps-common: &apps-common
   profiles: ['apps']
   logging: *default-logging
-  env_file: ./.env.local
+  env_file: ./.env.development
 
 x-mysql-image: &mysql-image
   image: mysql:8.0.22
@@ -44,7 +44,7 @@ services:
       args:
         - APP_NAME=applications
     ports:
-      - "3000:3000"
+      - "3031:3000"
     volumes:
       - ./_output/logs/applications:/app/_output/logs
     healthcheck:
@@ -68,7 +68,7 @@ services:
       args:
         - APP_NAME=cores
     ports:
-      - "3001:3001"
+      - "3032:3001"
     volumes:
       - ./_output/logs/cores:/app/_output/logs
     healthcheck:

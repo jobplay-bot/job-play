@@ -18,7 +18,7 @@ export const configSchema = Joi.object({
   MYSQL_PORT: Joi.number().required(),
 })
 
-export const isLocal = () => process.env.NODE_ENV === 'local'
+// export const isLocal = () => process.env.NODE_ENV === 'local'
 
 export function generateRandomUUID() {
   return randomUUID().toString().slice(0, 5)
