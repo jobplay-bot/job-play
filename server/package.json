@@ -32,9 +32,13 @@
     "@nestjs/platform-express": "^10.0.0",
     "@opentelemetry/api": "^1.9.0",
     "@opentelemetry/auto-instrumentations-node": "^0.55.0",
+    "@opentelemetry/core": "^2.0.0",
     "@opentelemetry/exporter-trace-otlp-http": "^0.57.0",
     "@opentelemetry/instrumentation-nestjs-core": "^0.44.0",
+    "@opentelemetry/propagator-b3": "^2.0.0",
+    "@opentelemetry/resources": "^2.0.0",
     "@opentelemetry/sdk-node": "^0.57.0",
+    "@opentelemetry/sdk-trace-node": "^2.0.0",
     "@opentelemetry/semantic-conventions": "^1.28.0",
     "joi": "^17.13.3",
     "reflect-metadata": "^0.1.13",
@@ -70,5 +74,6 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "5.3.2"
-  } 
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
