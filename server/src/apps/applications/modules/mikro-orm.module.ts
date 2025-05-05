@@ -3,6 +3,7 @@ import { MikroOrmModule as NestMikroOrmModule } from '@mikro-orm/nestjs'
 import { SqlHighlighter } from '@mikro-orm/sql-highlighter'
 import { Module } from '@nestjs/common'
 import { AppConfigService } from 'common'
+
 import { Study } from '../study'
 
 @Module({

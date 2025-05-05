@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 
-import { BaseConfigService } from './base-config.service'
 import { configSchema } from 'shared'
+
+import { BaseConfigService } from './base-config.service'
 
 @Injectable()
 export class AppConfigService extends BaseConfigService {

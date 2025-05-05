@@ -4,7 +4,9 @@ ARG APP_NAME
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
+# pnpm 설치 추가
+RUN npm install -g pnpm
+RUN pnpm install
 
 # Build stage
 FROM dependencies AS build
@@ -24,7 +26,9 @@ RUN apk add --update curl && \
     rm -rf /var/cache/apk/*
 
 COPY package*.json ./
-RUN npm ci --omit=dev
+# pnpm 설치 추가
+RUN npm install -g pnpm
+RUN pnpm install --prod
 
 COPY --from=build /app/_output/dist/${APP_NAME}/index.js /app/_output/dist/index.js
 
