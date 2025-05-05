@@ -13,16 +13,13 @@ export default function CareersDetailInfo({
   visaSupport,
   
 }: MainInfoProps) {
-  // if (
-  //   !visaSupport 
-  // ) return null;
 
   return (
     <div className="p-4 border rounded-lg bg-white shadow-sm mt-4 text-sm text-gray-700 space-y-4">
       {jobDescription && (
         <div>
           <h4 className="font-semibold">📝 담당 업무</h4>
-          <p className="whitespace-pre-wrap">{jobDescription}<br/></p>
+          <p className="whitespace-pre-wrap">{jobDescription}<br /></p>
         </div>
       )}
 
@@ -41,7 +38,6 @@ export default function CareersDetailInfo({
           <p>{visaSupport}</p>
         </div>
       )}
-      
     </div>
   );
 }

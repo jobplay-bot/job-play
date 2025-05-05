@@ -1,4 +1,3 @@
-// components/JobCard.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -17,47 +16,45 @@ interface JobData {
 
 interface JobCardProps {
   job: JobData;
-  onApplyClick: (jobId: number) => void; // optional로 처리해도 됨
+  onApplyClick: (jobId: number) => void;
 }
 
 export default function JobCard({ job, onApplyClick }: JobCardProps) {
   return (
-    <Card className="p-4 rounded-xl border border-gray-200">
+    <Card className="p-4 border border-gray-200 rounded-xl">
       <CardContent className="flex flex-col gap-3">
         {/* 카드 상단: 회사명과 마감일 */}
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-400">
+        <div className="flex items-center justify-between text-sm text-gray-400">
+          <div>
             {job.company} {job.deadline}
           </div>
-          <Heart className="h-4 w-4 text-gray-400" />
+          <Heart className="size-4 text-gray-400" />
         </div>
 
         {/* 채용 제목 */}
-
         <div className="text-base font-semibold leading-tight">
           {job.title}
         </div>
 
         {/* 급여 조건 */}
-        <div className="mt-3 mb-3">
+        <div className="my-3">
           <div className="flex items-center text-sm text-gray-600">
-            <span className="mr-2"><CircleDollarSign className="h-4 w-4 text-black"/></span>
+            <CircleDollarSign className="size-4 text-black mr-2" />
             {job.salary}
           </div>
 
           {/* 지역 정보 */}
           <div className="flex items-center text-sm text-gray-600 mt-3">
-            <MapPin className="h-4 w-4 mr-2 text-black" />
+            <MapPin className="size-4 text-black mr-2" />
             {job.location}
           </div>
-          </div>
+        </div>
 
         {/* 비자 조건 */}
         <div className="mb-3">
           <div className="text-sm font-semibold text-black mb-3">
             지원가능 비자
           </div>
-
           <div className="flex flex-wrap gap-2 text-sm mt-1">
             {job.visaRequirements.map((visa, idx) => (
               <Badge
@@ -74,7 +71,6 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
             )}
           </div>
         </div>
-
 
         {/* 버튼 영역 */}
         <div className="mt-4 flex gap-2">
