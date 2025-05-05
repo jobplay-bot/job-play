@@ -6,7 +6,7 @@ x-logging: &default-logging
 x-apps-common: &apps-common
   profiles: ['apps']
   logging: *default-logging
-  env_file: ./.env.local
+  env_file: ./.env.development
 
 x-mysql-image: &mysql-image
   image: mysql:8.0.22
