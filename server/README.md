@@ -55,11 +55,11 @@ APP_NAME=cores pnpm run start:dev
   - 린트: `pnpm run lint`
 
 로컬 개발 환경에서는 MySQL 데이터베이스를 사용합니다. MySQL을 사용하려면 Docker를 실행해야 합니다.
-- server 폴더에 .env.local 파일을 생성합니다.
-- .env.local 파일 내에 다음과 같은 내용을 추가합니다.
+- server 폴더에 .env.development 파일을 생성합니다.
+- .env.development 파일 내에 다음과 같은 내용을 추가합니다.
 ```
 MYSQL_HOST=local # 호스트 명에 따라 이름을 변경해줍니다.
-MYSQL_DATABASE=test
+MYSQL_DATABASE=job-play-dev
 MYSQL_ROOT_USER=root
 MYSQL_ROOT_PASSWORD=root
 MYSQL_PORT=3306 # 기본 포트 3306
