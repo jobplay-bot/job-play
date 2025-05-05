@@ -6,8 +6,9 @@ import { MikroORM } from '@mikro-orm/core'
 import { INestApplication } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 
-import { AppModule } from './app.module'
 import { AppConfigService, AppLoggerService } from 'common'
+
+import { AppModule } from './app.module'
 
 async function configureApplications(app: INestApplication<any>) {
   const logger = app.get(AppLoggerService)

@@ -1,12 +1,13 @@
-import { Test, TestingModule } from '@nestjs/testing'
-import { StudyService } from './study.service'
-import { EntityRepository } from '@mikro-orm/core'
-import { Study } from './study.entity'
 import { getRepositoryToken } from '@mikro-orm/nestjs'
+import { Test, TestingModule } from '@nestjs/testing'
+
+import { Study } from './study.entity'
+import { StudyService } from './study.service'
+
 
 describe('StudyService', () => {
   let service: StudyService
-  let fakeStudyRepository = {}
+  const fakeStudyRepository = {}
 
   const STUDY_REPOSITORY_TOKEN = getRepositoryToken(Study)
 

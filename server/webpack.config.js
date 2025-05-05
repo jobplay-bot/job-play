@@ -9,8 +9,8 @@ module.exports = (options) => {
         entry: path.resolve(dirname, 'main.ts'),
         output: {
             path: path.resolve(__dirname, `./_output/dist/${basename}`),
-            filename: 'index.js'
-        }
+            filename: 'index.js',
+        },
     }
 
     return output
