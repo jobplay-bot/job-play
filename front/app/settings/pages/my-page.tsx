@@ -4,10 +4,16 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { UploadIcon, LinkIcon } from "lucide-react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export default function MyPage() {
   const router = useRouter();
@@ -16,9 +22,9 @@ export default function MyPage() {
     <div className="w-full max-w-xl p-4 bg-white space-y-6">
       <h1 className="text-xl font-semibold">마이 페이지</h1>
 
-      <Card 
-        className="cursor-pointer hover:shadow-md transition-shadow duration-200 ease-in-out" 
-        onClick={() => router.push('/settings/pages/profile')}
+      <Card
+        className="cursor-pointer hover:shadow-md transition-shadow duration-200 ease-in-out"
+        onClick={() => router.push("/settings/pages/profile")}
       >
         <CardContent className="flex items-start gap-4 p-4">
           <div className="w-20 h-20 bg-gray-200 rounded" />

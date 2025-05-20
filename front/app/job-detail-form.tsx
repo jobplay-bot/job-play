@@ -12,7 +12,6 @@
 //     router.push("/careers"); // "/careers" 경로로 이동
 //   };
 
-
 //   return (
 //     <Card className="mx-auto max-w-md p-6">
 //       {/* Header */}

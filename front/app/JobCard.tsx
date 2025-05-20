@@ -32,9 +32,7 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
         </div>
 
         {/* 채용 제목 */}
-        <div className="text-base font-semibold leading-tight">
-          {job.title}
-        </div>
+        <div className="text-base font-semibold leading-tight">{job.title}</div>
 
         {/* 급여 조건 */}
         <div className="my-3">
@@ -77,7 +75,11 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
           <Button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white">
             바로 지원 하기
           </Button>
-          <Button variant="outline" className="flex-1" onClick={() => onApplyClick(job.id)}>
+          <Button
+            variant="outline"
+            className="flex-1"
+            onClick={() => onApplyClick(job.id)}
+          >
             공고 자세히 보기
           </Button>
         </div>

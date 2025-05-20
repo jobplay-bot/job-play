@@ -26,7 +26,7 @@ export default function CareersDetailQualification({
   category,
   updatedAt,
   workingLocation,
-  website
+  website,
 }: DescriptionProps) {
   if (
     !koreanLanguage &&

@@ -1,7 +1,13 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { countryList } from "@/const/countryList";
 import { KoreaRegionSelect } from "@/components/molecule/addressSelect";
@@ -11,18 +17,23 @@ export default function MyPageForm() {
     <div className="w-full max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
       <h1 className="text-xl font-bold text-center mb-6">마이 페이지</h1>
 
-      <Card 
-        className="mb-6" 
-      >
+      <Card className="mb-6">
         <CardContent className="flex items-start gap-4 p-4 ">
           <div className="w-20 h-20 bg-gray-200 rounded" />
           <div className="flex-1 space-y-1 text-sm">
             <div className="flex gap-2">
-              <Button variant="outline" size="sm">사진 업로드</Button>
-              <Button variant="destructive" size="sm">사진 삭제</Button>
+              <Button variant="outline" size="sm">
+                사진 업로드
+              </Button>
+              <Button variant="destructive" size="sm">
+                사진 삭제
+              </Button>
             </div>
-            <div className="text-gray-500">  SVG, JPG, PNG 파일만 가능합니다. <br />
-            권장 크기: 100px × 100px</div>
+            <div className="text-gray-500">
+              {" "}
+              SVG, JPG, PNG 파일만 가능합니다. <br />
+              권장 크기: 100px × 100px
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -58,13 +69,20 @@ export default function MyPageForm() {
               <SelectValue placeholder="국적을 선택해 주세요" />
             </SelectTrigger>
             <SelectContent>
-            {countryList.map((country, index) => {
-              const koreanName = Object.keys(country)[0] as keyof typeof country;
-              const englishName = country[koreanName] as string;
-              return (
-                <SelectItem key={index} value={englishName.toLowerCase().replace(/ /g, '-')}>{koreanName}</SelectItem>
-              );
-            })}
+              {countryList.map((country, index) => {
+                const koreanName = Object.keys(
+                  country,
+                )[0] as keyof typeof country;
+                const englishName = country[koreanName] as string;
+                return (
+                  <SelectItem
+                    key={index}
+                    value={englishName.toLowerCase().replace(/ /g, "-")}
+                  >
+                    {koreanName}
+                  </SelectItem>
+                );
+              })}
             </SelectContent>
           </Select>
         </div>

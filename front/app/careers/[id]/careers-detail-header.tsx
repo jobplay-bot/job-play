@@ -1,19 +1,32 @@
 "use client";
 
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Heart, CircleDollarSign, MapPin, BookA, ChevronLeft } from "lucide-react";
+import {
+  Heart,
+  CircleDollarSign,
+  MapPin,
+  BookA,
+  ChevronLeft,
+} from "lucide-react";
 
 interface HeaderProps {
   company: string;
-  title: string; 
+  title: string;
   deadline: string;
   location: string;
   salary: string;
   visaRequirements?: string[];
 }
 
-export default function CareersDetailHeader({ company, title, deadline, location, salary, visaRequirements = [] }: HeaderProps) {
+export default function CareersDetailHeader({
+  company,
+  title,
+  deadline,
+  location,
+  salary,
+  visaRequirements = [],
+}: HeaderProps) {
   const [liked, setLiked] = useState(false);
   const router = useRouter();
   return (
@@ -26,7 +39,9 @@ export default function CareersDetailHeader({ company, title, deadline, location
         />
       </div>
       <div className="flex justify-between items-start text-sm text-gray-500 mb-1">
-        <span>{company} • {deadline}</span>
+        <span>
+          {company} • {deadline}
+        </span>
       </div>
       <h2 className="text-lg font-semibold mb-1">{title}</h2>
       <div className="flex items-center text-sm ">

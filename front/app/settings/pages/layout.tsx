@@ -8,7 +8,9 @@ export default function DashboardLayout({
   return (
     <div className="bg-slate-100 flex items-center justify-center flex-col">
       <MenuHeader />
-      <main className="w-full flex items-center justify-center">{children}</main>
+      <main className="w-full flex items-center justify-center">
+        {children}
+      </main>
     </div>
   );
 }

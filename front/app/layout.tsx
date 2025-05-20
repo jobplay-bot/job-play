@@ -1,13 +1,13 @@
-import type {Metadata} from "next";
+import type { Metadata } from "next";
 import "./globals.css";
-import {Poppins} from 'next/font/google';
+import { Poppins } from "next/font/google";
 import AuthContext from "@/app/context/AuthContext";
 
 const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['100', '200', '300', '400', '500','600','700', '800', '900'],
-    variable: '--font-poppins'
-})
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Job Play",
@@ -20,12 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+    <html lang="en">
       <body className={`${poppins.variable} font-poppins antialiased`}>
-        <AuthContext>
-          {children}
-        </AuthContext>
+        <AuthContext>{children}</AuthContext>
       </body>
-      </html>
+    </html>
   );
 }

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import JobCelebrationForm from "@/app/job-celebration-from";
 import { Footer } from "@/components/common/Footer";
@@ -13,10 +13,10 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 px-4 ">
       <div className="mx-auto max-w-[576px] space-y-8 bg-white">
         <CareerHeader isLoggedIn={!!session} />
-        <HeaderSection/>
-        <JobCelebrationForm /> 
+        <HeaderSection />
+        <JobCelebrationForm />
         <Footer />
       </div>
-    </div> 
+    </div>
   );
 }

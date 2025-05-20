@@ -47,7 +47,7 @@ export default function JobDetailPage({ job }: { job: JobData }) {
         jobDescription={job.jobDescription}
         workingConditions={job.workingConditions}
         visaSupport={job.visaSupport}
-        />
+      />
       <CareersDetailQualification
         koreanLanguage={job.koreanLanguage}
         foreignLanguages={job.foreignLanguages}
@@ -61,4 +61,3 @@ export default function JobDetailPage({ job }: { job: JobData }) {
     </div>
   );
 }
-
