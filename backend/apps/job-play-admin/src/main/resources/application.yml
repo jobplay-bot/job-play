@@ -1,7 +1,0 @@
-server.port: 8081
-
-spring.application.name: admin
-spring.profiles.active: local
-
----
-spring.config.activate.on-profile: local

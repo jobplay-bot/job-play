@@ -1,7 +1,0 @@
-server.port: 8082
-
-spring.application.name: core
-spring.profiles.active: local
-
----
-spring.config.activate.on-profile: local
