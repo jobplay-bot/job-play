@@ -40,7 +40,7 @@ export default function CareersDetailQualification({
     return null;
 
   return (
-    <div className="p-4 border rounded-lg bg-white shadow-sm mt-4 text-sm text-gray-700 space-y-4">
+    <div className="mt-4 space-y-4 rounded-lg border bg-white p-4 text-sm text-gray-700 shadow-sm">
       <h3 className="text-xl font-semibold text-gray-600">상세 내역</h3>
 
       {(jobType.length > 0 || category) && (
@@ -83,7 +83,7 @@ export default function CareersDetailQualification({
       {foreignLanguages.length > 0 && (
         <div className="mt-0 grid gap-1">
           <h4 className="text-gray-400">언어 능력</h4>
-          <ul className="list-disc ml-5">
+          <ul className="ml-5 list-disc">
             {foreignLanguages.map((lang, i) => (
               <li key={i}>
                 {lang.language} ({lang.proficiency}) - {lang.description}
@@ -93,7 +93,7 @@ export default function CareersDetailQualification({
         </div>
       )}
 
-      {website && <hr className="my-4 pt-4 border-gray-200" />}
+      {website && <hr className="my-4 border-gray-200 pt-4" />}
       {website && (
         <div className="m-0">
           <h4 className="font-semibold">홈페이지</h4>

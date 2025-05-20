@@ -2,11 +2,11 @@ import { MenuHeader } from "@/components/common/Header";
 
 export default function Page() {
   return (
-    <div className="bg-slate-100 flex items-center justify-center flex-col">
+    <div className="flex flex-col items-center justify-center bg-slate-100">
       <MenuHeader title="이용 약관" />
-      <div className="mx-auto max-w-[576px] space-y-8 pb-40 flex justify-center items-center bg-white">
-        <main className="max-w-3xl mx-auto px-4 py-8">
-          <h1 className="text-2xl font-bold mb-6">이용 약관</h1>
+      <div className="mx-auto flex max-w-[576px] items-center justify-center space-y-8 bg-white pb-40">
+        <main className="mx-auto max-w-3xl px-4 py-8">
+          <h1 className="mb-6 text-2xl font-bold">이용 약관</h1>
 
           <section className="space-y-4 text-sm leading-relaxed">
             <div>

@@ -12,7 +12,7 @@ export default function CareersDetailInfo({
   visaSupport,
 }: MainInfoProps) {
   return (
-    <div className="p-4 border rounded-lg bg-white shadow-sm mt-4 text-sm text-gray-700 space-y-4">
+    <div className="mt-4 space-y-4 rounded-lg border bg-white p-4 text-sm text-gray-700 shadow-sm">
       {jobDescription && (
         <div>
           <h4 className="font-semibold">📝 담당 업무</h4>

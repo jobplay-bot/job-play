@@ -21,7 +21,7 @@ interface JobCardProps {
 
 export default function JobCard({ job, onApplyClick }: JobCardProps) {
   return (
-    <Card className="p-4 border border-gray-200 rounded-xl">
+    <Card className="rounded-xl border border-gray-200 p-4">
       <CardContent className="flex flex-col gap-3">
         {/* 카드 상단: 회사명과 마감일 */}
         <div className="flex items-center justify-between text-sm text-gray-400">
@@ -37,33 +37,33 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
         {/* 급여 조건 */}
         <div className="my-3">
           <div className="flex items-center text-sm text-gray-600">
-            <CircleDollarSign className="size-4 text-black mr-2" />
+            <CircleDollarSign className="mr-2 size-4 text-black" />
             {job.salary}
           </div>
 
           {/* 지역 정보 */}
-          <div className="flex items-center text-sm text-gray-600 mt-3">
-            <MapPin className="size-4 text-black mr-2" />
+          <div className="mt-3 flex items-center text-sm text-gray-600">
+            <MapPin className="mr-2 size-4 text-black" />
             {job.location}
           </div>
         </div>
 
         {/* 비자 조건 */}
         <div className="mb-3">
-          <div className="text-sm font-semibold text-black mb-3">
+          <div className="mb-3 text-sm font-semibold text-black">
             지원가능 비자
           </div>
-          <div className="flex flex-wrap gap-2 text-sm mt-1">
+          <div className="mt-1 flex flex-wrap gap-2 text-sm">
             {job.visaRequirements.map((visa, idx) => (
               <Badge
                 key={idx}
-                className="bg-gray-100 text-gray-700 border border-gray-300"
+                className="border border-gray-300 bg-gray-100 text-gray-700"
               >
                 {visa}
               </Badge>
             ))}
             {job.visaSupport && (
-              <Badge className="bg-gray-100 text-gray-700 border border-gray-300">
+              <Badge className="border border-gray-300 bg-gray-100 text-gray-700">
                 {job.visaSupport}
               </Badge>
             )}
@@ -72,7 +72,7 @@ export default function JobCard({ job, onApplyClick }: JobCardProps) {
 
         {/* 버튼 영역 */}
         <div className="mt-4 flex gap-2">
-          <Button className="flex-1 bg-blue-500 hover:bg-blue-600 text-white">
+          <Button className="flex-1 bg-blue-500 text-white hover:bg-blue-600">
             바로 지원 하기
           </Button>
           <Button

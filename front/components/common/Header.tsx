@@ -13,8 +13,8 @@ export function CareerHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full max-w-xl flex justify-between items-center h-[52px] px-4 bg-white border-b-2">
-      <Link href="/" className="text-blue-600 font-bold text-lg">
+    <header className="flex h-[52px] w-full max-w-xl items-center justify-between border-b-2 bg-white px-4">
+      <Link href="/" className="text-lg font-bold text-blue-600">
         JOB PLAY
       </Link>
 
@@ -22,11 +22,11 @@ export function CareerHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon">
-              <Menu className="w-6 h-6" />
+              <Menu className="size-6" />
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-white">
-            <div className="flex flex-col space-y-4 mt-4">
+            <div className="mt-4 flex flex-col space-y-4">
               <Link href={`/settings/pages`} className="text-left">
                 👤 마이 페이지
               </Link>
@@ -56,7 +56,7 @@ type Props = {
 export function MenuHeader({ title }: Props) {
   const router = useRouter();
   return (
-    <header className="w-full max-w-xl flex justify-between items-center h-[52px] px-4 bg-white border-b-2">
+    <header className="flex h-[52px] w-full max-w-xl items-center justify-between border-b-2 bg-white px-4">
       <ChevronLeft onClick={() => router.back()} className="cursor-pointer" />
       {title ? (
         <h1 className="text-lg font-bold">{title}</h1>
@@ -64,7 +64,7 @@ export function MenuHeader({ title }: Props) {
         <div /> // 가운데 공간 확보용 (flex 균형 맞추기용)
       )}
       <House
-        className="w-6 h-6 cursor-pointer"
+        className="size-6 cursor-pointer"
         onClick={() => router.push("/")}
       />
     </header>

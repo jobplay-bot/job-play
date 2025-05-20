@@ -30,31 +30,31 @@ export default function CareersDetailHeader({
   const [liked, setLiked] = useState(false);
   const router = useRouter();
   return (
-    <div className="p-4 border-b rounded-b-lg bg-white shadow-sm">
-      <div className="flex justify-between items-start text-sm mb-10">
+    <div className="rounded-b-lg border-b bg-white p-4 shadow-sm">
+      <div className="mb-10 flex items-start justify-between text-sm">
         <ChevronLeft onClick={() => router.back()} className="cursor-pointer" />
         <Heart
-          className={`cursor-pointer ${liked ? "text-red-500 fill-red-500" : "text-black"} size-5`}
+          className={`cursor-pointer ${liked ? "fill-red-500 text-red-500" : "text-black"} size-5`}
           onClick={() => setLiked(!liked)}
         />
       </div>
-      <div className="flex justify-between items-start text-sm text-gray-500 mb-1">
+      <div className="mb-1 flex items-start justify-between text-sm text-gray-500">
         <span>
           {company} • {deadline}
         </span>
       </div>
-      <h2 className="text-lg font-semibold mb-1">{title}</h2>
+      <h2 className="mb-1 text-lg font-semibold">{title}</h2>
       <div className="flex items-center text-sm ">
-        <CircleDollarSign className="text-black size-4 mr-2" />
+        <CircleDollarSign className="mr-2 size-4 text-black" />
         {salary}
       </div>
       <div className="flex items-center text-sm ">
-        <MapPin className="text-black size-4 mr-2" />
+        <MapPin className="mr-2 size-4 text-black" />
         {location}
       </div>
       {visaRequirements.length > 0 && (
         <div className="flex items-center">
-          <BookA className="text-black size-4 mr-2" />
+          <BookA className="mr-2 size-4 text-black" />
           <p className="text-sm ">{visaRequirements.join(" / ")}</p>
         </div>
       )}

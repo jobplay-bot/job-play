@@ -11,7 +11,7 @@ export const Footer = () => {
 
 export const MainFooter = () => {
   return (
-    <footer className="w-full max-w-xl flex flex-col gap-4 justify-center items-center h-[104px] px-4 bg-white border-b-2">
+    <footer className="flex h-[104px] w-full max-w-xl flex-col items-center justify-center gap-4 border-b-2 bg-white px-4">
       <p className="flex justify-center">© JOBPLAY</p>
       <div className="flex gap-2">
         <Link href={``}>서비스 이용약관</Link>|

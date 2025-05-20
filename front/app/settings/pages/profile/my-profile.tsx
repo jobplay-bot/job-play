@@ -14,12 +14,12 @@ import { KoreaRegionSelect } from "@/components/molecule/addressSelect";
 
 export default function MyPageForm() {
   return (
-    <div className="w-full max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
-      <h1 className="text-xl font-bold text-center mb-6">마이 페이지</h1>
+    <div className="mx-auto w-full max-w-xl rounded-lg bg-white p-6 shadow-md">
+      <h1 className="mb-6 text-center text-xl font-bold">마이 페이지</h1>
 
       <Card className="mb-6">
         <CardContent className="flex items-start gap-4 p-4 ">
-          <div className="w-20 h-20 bg-gray-200 rounded" />
+          <div className="size-20 rounded bg-gray-200" />
           <div className="flex-1 space-y-1 text-sm">
             <div className="flex gap-2">
               <Button variant="outline" size="sm">
@@ -102,7 +102,7 @@ export default function MyPageForm() {
           <Input placeholder="이메일을 입력해 주세요." />
         </div>
 
-        <Button className="w-full mt-4">저장 하기</Button>
+        <Button className="mt-4 w-full">저장 하기</Button>
       </div>
     </div>
   );

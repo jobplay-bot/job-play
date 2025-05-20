@@ -3,8 +3,8 @@
 import Link from "next/link";
 export default function CareersDetailInfomation() {
   return (
-    <div className="p-4 border rounded-lg mt-4 mb-6 bg-white shadow-sm ">
-      <div className="text-sm text-gray-500 grid gap-6">
+    <div className="mb-6 mt-4 rounded-lg border bg-white p-4 shadow-sm ">
+      <div className="grid gap-6 text-sm text-gray-500">
         <p>
           본 채용 정보는 잡플레이(JobPlay)의 동의 없이 무단으로 인용, 복제,
           재배포, 편집, 번역, 재가공할 수 없으며 구직 이외의 용도로 사용할 수
