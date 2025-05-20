@@ -11,12 +11,12 @@ export const KoreaRegionSelect = () => {
   const cities = Object.keys(koreaRegions) as (keyof typeof koreaRegions)[];
   const guOptions = selectedCity ? koreaRegions[selectedCity] : [];
 
-  const handleCityChange = (city) => {
+  const handleCityChange = (city: keyof typeof koreaRegions) => {
     setSelectedCity(city);
     setSelectedGu(''); // 시가 변경되면 구 선택 초기화
   };
 
-  const handleGuChange = (gu) => {
+  const handleGuChange = (gu: string) => {
     setSelectedGu(gu);
   };
 
