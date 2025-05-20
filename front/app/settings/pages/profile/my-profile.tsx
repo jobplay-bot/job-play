@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { countryList } from "@/const/countryList";
+import { KoreaRegionSelect } from "@/components/molecule/addressSelect";
 
 export default function MyPageForm() {
   return (
@@ -56,9 +58,13 @@ export default function MyPageForm() {
               <SelectValue placeholder="국적을 선택해 주세요" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="korea">대한민국</SelectItem>
-              <SelectItem value="usa">미국</SelectItem>
-              <SelectItem value="japan">일본</SelectItem>
+            {countryList.map((country, index) => {
+              const koreanName = Object.keys(country)[0] as keyof typeof country;
+              const englishName = country[koreanName] as string;
+              return (
+                <SelectItem key={index} value={englishName.toLowerCase().replace(/ /g, '-')}>{koreanName}</SelectItem>
+              );
+            })}
             </SelectContent>
           </Select>
         </div>
@@ -70,16 +76,7 @@ export default function MyPageForm() {
 
         <div>
           <Label>거주지역*</Label>
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="거주 지역을 선택해 주세요" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="seoul">서울</SelectItem>
-              <SelectItem value="busan">부산</SelectItem>
-              <SelectItem value="daegu">대구</SelectItem>
-            </SelectContent>
-          </Select>
+          <KoreaRegionSelect />
         </div>
 
         <div>
